@@ -42,20 +42,21 @@ export const Text = styled.div`
   width: 100%;
   gap: 6rem;
   margin: 0 1rem;
+`;
 
-  li {
-    list-style: none;
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--grayBlue);
-    padding: 1rem 2rem;
-    display: inline;
-    cursor: pointer;
+export const StyledLi = styled.li`
+  list-style: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--grayBlue);
+  padding: 1rem 2rem;
+  padding-bottom: 3rem;
+  display: inline;
+  cursor: pointer;
 
-    :hover {
-      color: var(--black);
-      transition: 0.2s ease;
-    }
+  &:hover {
+    color: var(--black);
+    border-bottom: 5px solid var(--orange);
   }
 `;
 
@@ -70,4 +71,10 @@ export const AvatarStyle = styled.div`
     border: 2px solid var(--orange);
     border-radius: 50%;
   }
+`;
+
+export const Line = styled.hr`
+  border: 1px solid var(--lightGrayBlue);
+  width: 100%;
+  margin-top: 40px;
 `;
