@@ -7,7 +7,6 @@ export const Button = styled.button`
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  /* margin-left: 400px; */
   font-weight: bold;
   :hover,
   :active {
@@ -15,9 +14,9 @@ export const Button = styled.button`
 `;
 
 export const IconWrapper = styled.div`
-  width: 1.6rem;
-  height: 1.6rem;
-  margin-right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.3rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -25,13 +24,14 @@ export const IconWrapper = styled.div`
 `;
 
 export const Badge = styled.div`
-  background-color: var(--orange);
-  font-size: 10px;
-  padding: 0.5rem;
-  border-radius: 50%;
-  /* margin-left: 1rem; */
-  font-weight: bold;
+  font-size: 12px;
+  background: var(--orange);
   color: var(--white);
+  padding: 1px 6px;
+  border-radius: 45%;
+  vertical-align: top;
+  margin-left: -10px;
+  margin-bottom: 18px;
   :hover,
   :active {
   }
