@@ -8,7 +8,9 @@ export const GlobalStyle = createGlobalStyle`
         --grayBlue: hsl(220, 14%, 75%);
         --lightGrayBlue:  hsl(223, 64%, 98%);
         --white: hsl(0, 0%, 100%);
-        --black: hsl(0, 0%, 0%);
+        --black: hsla(0, 0%, 0%, 75%);
+        --maxWidth: 1440px;
+        --mobile: 375px;
 
     }
 
@@ -23,6 +25,21 @@ export const GlobalStyle = createGlobalStyle`
         p {
             font-size: 16px;
             font-weight: 400;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 1.7rem;
+            font-weight: 700;
         }
     }
 `;
