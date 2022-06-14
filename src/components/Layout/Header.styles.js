@@ -68,8 +68,11 @@ export const AvatarStyle = styled.div`
   img {
     width: 50px;
     height: auto;
-    border: 2px solid var(--orange);
-    border-radius: 50%;
+
+    :hover {
+      border: 2px solid var(--orange);
+      border-radius: 50%;
+    }
   }
 `;
 

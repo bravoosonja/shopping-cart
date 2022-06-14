@@ -25,7 +25,6 @@ export const GlobalStyle = createGlobalStyle`
         margin:  0 auto !important;
         padding: 0;
         max-width: var(--maxWidth);
-        max-height: 100vh;
         padding: 0;
         background-color:var(--white);
         color: var(--black);
