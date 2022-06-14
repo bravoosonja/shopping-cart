@@ -1,5 +1,7 @@
+import React, { useState } from "react";
 // Components
 import Header from "./components/Layout/Header";
+import Cart from "./components/Cart/Cart";
 // Styles
 import { GlobalStyle } from "./GlobalStyle";
 // Context
@@ -10,22 +12,20 @@ function App() {
 
   const showCartHandler = () => {
     setCartIsShown(true);
-  }
+  };
 
   const hideCartHandler = () => {
     setCartIsShown(false);
-  }
+  };
 
   return (
     <CartProvider>
-      
+      {cartIsShown && <Cart onClose={hideCartHandler} />}
       <Header />
-      <main>
-
-      </main>
+      <main>Hello</main>
       <GlobalStyle />
     </CartProvider>
-  )
+  );
 }
 
 export default App;

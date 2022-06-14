@@ -1,28 +1,41 @@
+import React from "react";
+// Components
+import HeaderCartButton from "./HeaderCartButton";
 // Styles
-import { Wrapper, Content, Text } from "./Header.styles";
+import {
+  Wrapper,
+  Content,
+  Text,
+  LogoStyle,
+  AvatarStyle,
+} from "./Header.styles";
+// Images
 import Logo from "../../assets/images/logo.svg";
-// import IconCart from "../../assets/images/icon-cart.svg";
-import Avatar from '../../assets/images/image-avatar.png';
+import Avatar from "../../assets/images/image-avatar.png";
 
-const Header = () => {
-    <>
+const Header = (props) => {
+  return (
     <Wrapper>
-        <Content>
-        <Logo/>
+      <Content>
+        <LogoStyle>
+          <img src={Logo} alt="logo" />
+        </LogoStyle>
         <Text>
-            <ul>
-                <li>Collections</li>
-                <li>Men</li>
-                <li>Women</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
+          <ul>
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
         </Text>
-        {/* <IconCart/> */}
-        <Avatar/>
-        </Content>
+        <HeaderCartButton onClick={props.onShowCart} />
+        <AvatarStyle>
+          <img src={Avatar} alt="avatar" />
+        </AvatarStyle>
+      </Content>
     </Wrapper>
-    </>
+  );
 };
 
 export default Header;
