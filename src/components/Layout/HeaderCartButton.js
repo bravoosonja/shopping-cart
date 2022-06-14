@@ -34,8 +34,8 @@ const HeaderCartButton = (props) => {
     <Button onClick={props.onClick}>
       <IconWrapper>
         <img src={CartIcon} alt="cart-icon" />
+        <Badge>{numberOfCartItems}</Badge>
       </IconWrapper>
-      <Badge>{numberOfCartItems}</Badge>
     </Button>
   );
 };

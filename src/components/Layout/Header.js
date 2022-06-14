@@ -21,18 +21,20 @@ const Header = (props) => {
           <img src={Logo} alt="logo" />
         </LogoStyle>
         <Text>
-          <ul>
+          <nav>
             <li>Collections</li>
             <li>Men</li>
             <li>Women</li>
             <li>About</li>
             <li>Contact</li>
-          </ul>
+          </nav>
         </Text>
-        <HeaderCartButton onClick={props.onShowCart} />
-        <AvatarStyle>
-          <img src={Avatar} alt="avatar" />
-        </AvatarStyle>
+        <div id="controls">
+          <HeaderCartButton onClick={props.onShowCart} />
+          <AvatarStyle>
+            <img src={Avatar} alt="avatar" />
+          </AvatarStyle>
+        </div>
       </Content>
     </Wrapper>
   );

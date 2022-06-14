@@ -1,39 +1,38 @@
 import styled from "styled-components";
 
-export const IconWrapper = styled.div`
-  width: 1.35rem;
-  height: 1.35rem;
-  margin-right: 0.5rem;
-`;
-
 export const Button = styled.button`
-  cursor: pointer;
   font: inherit;
   border: none;
-  background-color: var(--paleOrange);
-  color: var(--white);
-  padding: 0.75rem 3rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
-  border-radius: 25px;
+  width: 100%;
+  /* margin-left: 400px; */
   font-weight: bold;
-
   :hover,
   :active {
-    background-color: var(--orange);
   }
+`;
+
+export const IconWrapper = styled.div`
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Badge = styled.div`
   background-color: var(--orange);
-  padding: 0.25rem 1rem;
-  border-radius: 25px;
-  margin-left: 1rem;
+  font-size: 10px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  /* margin-left: 1rem; */
   font-weight: bold;
-
+  color: var(--white);
   :hover,
   :active {
-    background-color: var(--paleOrange);
   }
 `;

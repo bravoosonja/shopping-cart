@@ -22,7 +22,7 @@ function App() {
     <CartProvider>
       {cartIsShown && <Cart onClose={hideCartHandler} />}
       <Header />
-      <main>Hello</main>
+      <main>Main</main>
       <GlobalStyle />
     </CartProvider>
   );
