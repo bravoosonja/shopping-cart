@@ -1,5 +1,5 @@
 // Styles
-import { Wrapper, Content, Text } from "./Cart.styles";
+import { Wrapper, Content, Text } from "./CartItem.styles";
 
 const CartItem = (props) => {
   const price = `$${props.price.toFixed(2)}`;

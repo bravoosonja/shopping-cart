@@ -1,13 +1,9 @@
 import ReactDOM from "react-dom";
 // Styles
-import { StyledModalOverlay, Content } from "./Modal.styles";
+import { StyledModalOverlay } from "./Modal.styles";
 
 const ModalOverlay = (props) => {
-  return (
-    <StyledModalOverlay>
-      <Content>{props.children}</Content>
-    </StyledModalOverlay>
-  );
+  return <StyledModalOverlay>{props.children}</StyledModalOverlay>;
 };
 
 const portalElement = document.getElementById("overlays");

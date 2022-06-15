@@ -2,20 +2,15 @@ import styled from "styled-components";
 
 export const StyledModalOverlay = styled.div`
   position: fixed;
-  top: 10vh;
-  right: ${(props) => props.top};
-  width: ${(props) => props.top};
-  background-color: var(--white);
-  padding: 1rem;
-  border-radius: 14px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  top: 12vh;
+  right: 100px;
+  width: 23%;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: rgba(50, 50, 93, 0.2) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.2) 0px 30px 60px -30px;
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
-
-  @media (min-width: 768px) {
-    width: 40rem;
-    left: calc(50% - 20rem);
-  }
 
   @keyframes slide-down {
     from {
@@ -28,5 +23,3 @@ export const StyledModalOverlay = styled.div`
     }
   }
 `;
-
-export const Content = styled.div``;

@@ -5,7 +5,16 @@ import CartContext from "../../store/CartContext";
 import CartItem from "./CartItem";
 import Modal from "../UI/Modal";
 // Styles
-import { Wrapper, Content, Text, Total, Actions, Buttons } from "./Cart.styles";
+import {
+  Wrapper,
+  Content,
+  CartItemsStyle,
+  Total,
+  Buttons,
+  CloseIconStyle,
+  DeleteIconStyle,
+  StyledLine,
+} from "./Cart.styles";
 // Icons
 import DeleteIcon from "../../assets/images/icon-delete.svg";
 import CloseIcon from "../../assets/images/icon-close.svg";
@@ -41,18 +50,30 @@ const Cart = (props) => {
 
   return (
     <Modal onClose={props.onClose}>
-      <h3>Cart</h3>
-      {cartItems}
-      <Total>
-        <span>Total Amount</span>
-        <span>{totalAmount}</span>
-      </Total>
-      <Actions>
-        <CloseIcon onClick={props.onClose}>
-          <img src={CloseIcon} alt="close icon" />
-        </CloseIcon>
-        {hasItems && <Buttons>Checkout</Buttons>}
-      </Actions>
+      <Wrapper>
+        <Content>
+          <h3>Cart</h3>
+        </Content>
+        <StyledLine />
+        <Content>
+          <CloseIconStyle onClick={props.onClose}>
+            <img src={CloseIcon} alt="close cart" />
+          </CloseIconStyle>
+          <CartItemsStyle>
+            {cartItems}
+            <Total>
+              <span>Total Amount</span>
+              <span>{totalAmount}</span>
+            </Total>
+            {hasItems && (
+              <DeleteIconStyle>
+                <img src={DeleteIcon} alt="delete item from cart" />
+              </DeleteIconStyle>
+            )}
+          </CartItemsStyle>
+          {hasItems && <Buttons>Checkout</Buttons>}
+        </Content>
+      </Wrapper>
     </Modal>
   );
 };

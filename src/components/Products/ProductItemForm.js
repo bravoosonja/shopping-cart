@@ -1,0 +1,41 @@
+import { useRef, useState } from "react";
+// Components
+import Input from "../UI/Input";
+// Icons
+import PlusIcon from "../../assets/images/icon-plus.svg";
+import MinusIcon from "../../assets/images/icon-minus.svg";
+
+const ProductItemForm = (props) => {
+  const [amountIsValid, setAmountIsValid] = useState(true);
+  const amountInputRef = useRef();
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const enteredAmount = amountInputRef.current.value;
+    const enteredAmountNumber = +enteredAmount;
+
+    if (enteredAmount.trim().length === 0 || enteredAmount < 1) {
+      setAmountIsValid(false);
+      return;
+    }
+    props.onAddToCart(enteredAmountNumber);
+  };
+  return (
+    <form onSubmit={submitHandler}>
+      <Input
+        ref={amountInputRef}
+        input={{
+          id: "amount_" + props.id,
+          type: "number",
+          min: "1",
+          step: "1",
+          defaultValue: "1",
+        }}
+      />
+      <button>+</button>
+      {!amountIsValid && <p>Please enter a valid amount.</p>}
+    </form>
+  );
+};
+
+export default ProductItemForm;
