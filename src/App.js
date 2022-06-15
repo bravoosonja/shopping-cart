@@ -5,6 +5,8 @@ import Header from "./components/Layout/Header";
 import Main from "./components/Layout/Main";
 // Styles
 import { GlobalStyle } from "./GlobalStyle";
+import "normalize.css";
+
 // Context
 import CartProvider from "./store/CartProvider";
 

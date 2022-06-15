@@ -62,21 +62,25 @@ export const ProductDescription = styled.div`
   p {
     color: var(--grayBlue);
     font-size: 1rem;
+    margin-bottom: 20px;
   }
 `;
 
 export const Price = styled.div`
-  display: flex;
+  display: inline;
   margin: 20px 0;
 
   h2 {
-    margin-right: 20px;
+    margin: 20px 0;
+    display: inline;
   }
 
   span {
+    margin-left: 20px;
     background-color: var(--paleOrange);
     border-radius: 10px;
-    padding: 0.5rem;
+    padding: 0.3rem;
+    display: inline;
   }
 
   p {
@@ -85,5 +89,9 @@ export const Price = styled.div`
     font-weight: 400;
     text-decoration: line-through;
     width: 100%;
+    display: block;
+    margin-top: 10px;
   }
 `;
+
+export const OrderContent = styled.div``;

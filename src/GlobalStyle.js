@@ -72,5 +72,6 @@ export const GlobalStyle = createGlobalStyle`
             -moz-osx-font-smoothing: inherit;
             -webkit-appearance: none;
         }
+
     }
 `;

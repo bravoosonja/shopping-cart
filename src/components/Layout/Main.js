@@ -1,4 +1,7 @@
 import React from "react";
+// Components
+import Input from "../UI/Input";
+
 // Styles
 import {
   Wrapper,
@@ -8,6 +11,7 @@ import {
   ProductImageThumb,
   ProductDescription,
   Price,
+  OrderContent,
 } from "./Main.styles";
 // Images
 import BigImage from "../../assets/images/image-product-1.jpg";
@@ -44,6 +48,9 @@ const Main = () => {
             <span>50%</span>
             <p>$250.00</p>
           </Price>
+          <OrderContent>
+            <Input />
+          </OrderContent>
         </ProductDescription>
       </Content>
     </Wrapper>
