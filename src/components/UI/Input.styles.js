@@ -21,6 +21,10 @@ export const StyledInput = styled.div`
     background-color: inherit;
     width: 5rem;
     text-align: center;
+
+    :focus {
+      outline: none;
+    }
   }
 `;
 
