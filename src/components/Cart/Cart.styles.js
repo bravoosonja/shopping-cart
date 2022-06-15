@@ -11,3 +11,7 @@ export const Total = styled.div``;
 export const Actions = styled.div``;
 
 export const Buttons = styled.button``;
+
+export const DeleteIconStyle = styled.div``;
+
+export const CloseIconStyle = styled.div``;

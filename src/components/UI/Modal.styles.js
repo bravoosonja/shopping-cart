@@ -1,11 +1,32 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div``;
+export const StyledModalOverlay = styled.div`
+  position: fixed;
+  top: 10vh;
+  right: ${(props) => props.top};
+  width: ${(props) => props.top};
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 30;
+  animation: slide-down 300ms ease-out forwards;
+
+  @media (min-width: 768px) {
+    width: 40rem;
+    left: calc(50% - 20rem);
+  }
+
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-3rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`;
 
 export const Content = styled.div``;
-
-export const Text = styled.div``;
-
-export const Backdrop = styled.div``;
-
-export const ModalOverlay = styled.div``;
