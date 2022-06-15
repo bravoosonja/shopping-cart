@@ -10,9 +10,9 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 50px;
+  gap: 10px;
 `;
 
 export const ProductImages = styled.div`
@@ -45,7 +45,7 @@ export const ProductImageThumb = styled.div`
 
 export const ProductDescription = styled.div`
   align-items: left;
-  width: 40%;
+  width: 45%;
   margin-bottom: 200px;
 
   span {
@@ -94,4 +94,9 @@ export const Price = styled.div`
   }
 `;
 
-export const OrderContent = styled.div``;
+export const OrderContent = styled.div`
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+`;

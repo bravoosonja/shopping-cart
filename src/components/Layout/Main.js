@@ -1,7 +1,7 @@
 import React from "react";
 // Components
 import Input from "../UI/Input";
-
+import Button from "../UI/Button";
 // Styles
 import {
   Wrapper,
@@ -50,6 +50,7 @@ const Main = () => {
           </Price>
           <OrderContent>
             <Input />
+            <Button />
           </OrderContent>
         </ProductDescription>
       </Content>

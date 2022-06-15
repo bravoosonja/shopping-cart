@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 // Styles
-import { Button, Badge, IconWrapper } from "./HeaderCartButton.styles";
+import { HeaderButton, Badge, IconWrapper } from "./HeaderCartButton.styles";
 import CartIcon from "../../assets/images/icon-cart.svg";
 // Context
 import CartContext from "../../store/CartContext";
@@ -31,12 +31,12 @@ const HeaderCartButton = (props) => {
   }, [items]);
 
   return (
-    <Button onClick={props.onClick}>
+    <HeaderButton onClick={props.onClick}>
       <IconWrapper>
         <img src={CartIcon} alt="cart-icon" />
         <Badge>{numberOfCartItems}</Badge>
       </IconWrapper>
-    </Button>
+    </HeaderButton>
   );
 };
 
