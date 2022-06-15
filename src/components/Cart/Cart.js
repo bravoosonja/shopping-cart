@@ -6,6 +6,9 @@ import CartItem from "./CartItem";
 import Modal from "../UI/Modal";
 // Styles
 import { Wrapper, Content, Text, Total, Actions, Buttons } from "./Cart.styles";
+// Icons
+import DeleteIcon from "../../assets/images/icon-delete.svg";
+import CloseIcon from "../../assets/images/icon-close.svg";
 
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
@@ -38,13 +41,16 @@ const Cart = (props) => {
 
   return (
     <Modal onClose={props.onClose}>
+      <h3>Cart</h3>
       {cartItems}
       <Total>
         <span>Total Amount</span>
         <span>{totalAmount}</span>
       </Total>
       <Actions>
-        <Buttons onClick={props.onClose}>Close</Buttons>
+        <CloseIcon onClick={props.onClose}>
+          <img src={CloseIcon} alt="close icon" />
+        </CloseIcon>
         {hasItems && <Buttons>Checkout</Buttons>}
       </Actions>
     </Modal>

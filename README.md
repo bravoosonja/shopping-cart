@@ -14,6 +14,7 @@ The objective of this project is to implement a front-end shopping cart functina
 - Styled Components
 
 # Lessons Learned
+- Importing svgs to React
 
 # Acknowledgements
 - [Style guide](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6)

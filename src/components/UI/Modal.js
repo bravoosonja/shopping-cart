@@ -1,6 +1,14 @@
 import ReactDOM from "react-dom";
 // Styles
-import { Wrapper, Content, Text, Backdrop, ModalOverlay } from "./Modal.styles";
+import { StyledModalOverlay, Content } from "./Modal.styles";
+
+const ModalOverlay = (props) => {
+  return (
+    <StyledModalOverlay>
+      <Content>{props.children}</Content>
+    </StyledModalOverlay>
+  );
+};
 
 const portalElement = document.getElementById("overlays");
 
@@ -8,14 +16,11 @@ const Modal = (props) => {
   return (
     <>
       {ReactDOM.createPortal(
-        <Backdrop onClose={props.onClose} />,
-        portalElement
-      )}
-      {ReactDOM.createPortal(
         <ModalOverlay>{props.children}</ModalOverlay>,
         portalElement
       )}
     </>
   );
 };
+
 export default Modal;
