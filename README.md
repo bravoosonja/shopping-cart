@@ -1,12 +1,12 @@
 # Overview
-The objective of this project is to implement a front-end shopping cart functinality. 
+The objective of this project is to implement a front-end shopping cart functionality. 
 
 ## Features
 - Mobile responsive
 - Add and remove items to the cart 
-- View the cart 
+- View the cart modal
 - Show active states (empty, not empty) of the cart 
-- Lightbox gallery for product image
+
 ## Demo
 
 # Skills used

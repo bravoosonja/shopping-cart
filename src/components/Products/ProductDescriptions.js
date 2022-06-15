@@ -6,8 +6,7 @@ import {
   OrderContent,
 } from "./ProductDescription.styles";
 // Components
-import Input from "../UI/Input";
-import Button from "../UI/Button";
+import ProductItemForm from "./ProductItemForm";
 
 const ProductDescriptions = () => {
   return (
@@ -25,8 +24,7 @@ const ProductDescriptions = () => {
         <p>$250.00</p>
       </Price>
       <OrderContent>
-        <Input />
-        <Button />
+        <ProductItemForm />
       </OrderContent>
     </ProductDescription>
   );
