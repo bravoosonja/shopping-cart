@@ -1,8 +1,5 @@
 import { useRef, useState } from "react";
 import styled from "styled-components";
-// Icons
-import PlusIcon from "../../assets/images/icon-plus.svg";
-import MinusIcon from "../../assets/images/icon-minus.svg";
 // Components
 import Button from "../UI/Button";
 
@@ -24,25 +21,20 @@ const ProductItemForm = (props) => {
   return (
     <>
       <StyledForm onSubmit={submitHandler}>
-        <button onClick={props.onRemove}>
-          <img src={MinusIcon} alt="minus item" />
-        </button>
         <StyledInput
           ref={amountInputRef}
           input={{
             id: "amount_" + props.id,
-            type: "number",
             min: "1",
             step: "1",
+            type: "number",
             defaultValue: "1",
           }}
+          placeholder="Qty"
         />
-        <button onClick={props.onAdd}>
-          <img src={PlusIcon} alt="plus item" />
-        </button>
         <Button />
-        {!amountIsValid && <p>Please enter a valid amount.</p>}
       </StyledForm>
+      {!amountIsValid && <p>Please enter a valid amount.</p>}
     </>
   );
 };
@@ -56,7 +48,7 @@ const StyledForm = styled.form`
   padding: 1rem;
 `;
 
-const StyledInput = styled.input`
+const StyledInput = styled.input.attrs({ type: "number" })`
   border: none;
   font-size: 16px;
   font-weight: 700;
@@ -65,40 +57,12 @@ const StyledInput = styled.input`
   text-align: center;
   border-radius: 12px;
   padding: 1rem;
-  width: 30%;
+  width: 50%;
+  cursor: pointer;
 
   :focus {
-    outline: none;
+    outline: 3px solid var(--paleOrange);
   }
-
-  ::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  ::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-`;
-
-const StyledLabel = styled.label`
-  font-weight: 700;
-  color: var(--black);
-`;
-
-const StyledButton = styled.button`
-  background-color: var(--orange);
-  color: var(--white);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  padding: 1rem 1.5rem;
-  width: 30%;
-  gap: 15px;
-  font-weight: 700;
-  font-size: 16px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 `;
 
 export default ProductItemForm;
