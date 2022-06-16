@@ -29,7 +29,7 @@ const ProductItemForm = (props) => {
   return (
     <>
       <StyledForm onSubmit={submitHandler}>
-        <button>
+        <button onClick={props.onRemove}>
           <img src={MinusIcon} alt="minus item" />
         </button>
         <StyledInput
@@ -42,7 +42,7 @@ const ProductItemForm = (props) => {
             defaultValue: "1",
           }}
         />
-        <button>
+        <button onClick={props.onAdd}>
           <img src={PlusIcon} alt="plus item" />
         </button>
         <StyledButton type="submit">
