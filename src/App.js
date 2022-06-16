@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // Components
 import Header from "./components/Layout/Header";
 import Cart from "./components/Cart/Cart";
-import Main from "./components/Layout/Main";
+import Products from "./components/Products/Products";
 // Styles
 import { GlobalStyle } from "./GlobalStyle";
 import "normalize.css";
@@ -25,9 +25,9 @@ function App() {
     <CartProvider>
       {cartIsShown && <Cart onClose={hideCartHandler} />}
       <Header onShowCart={showCartHandler} />
-
-      <Main />
-
+      <main>
+        <Products />
+      </main>
       <GlobalStyle />
     </CartProvider>
   );

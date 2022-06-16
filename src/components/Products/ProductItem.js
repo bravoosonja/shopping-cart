@@ -3,10 +3,9 @@ import styled from "styled-components";
 // Components
 import ProductItemForm from "./ProductItemForm";
 import CartContext from "../../store/CartContext";
-import Button from "../UI/Button";
 
 const ProductItem = (props) => {
-  cartCtx = useContext(CartContext);
+  const cartCtx = useContext(CartContext);
   const price = `$${props.price.toFixed(2)}`;
 
   const addToCartHandler = (amount) => {
@@ -16,26 +15,32 @@ const ProductItem = (props) => {
       name: props.name,
       amount: amount,
       price: props.price,
+      description: props.description,
     });
   };
   return (
     <Wrapper>
+      <ProductName>{props.name}</ProductName>
       <ProductImg>
-        <img src={props.image} alt={props.title} />
+        <img src={props.image} alt={props.name} />
       </ProductImg>
       <Content>
-        <ProductName>{props.name}</ProductName>
-        <ProductPrice>{props.price}</ProductPrice>
-        <Button />
+        <ProductPrice>${props.price}</ProductPrice>
+        <ProductDescription>{props.description}</ProductDescription>
+        <ProductItemForm />
       </Content>
     </Wrapper>
   );
 };
 
+// Styles
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: min-content;
+  margin: auto;
 `;
 
 const ProductImg = styled.div`
@@ -43,24 +48,31 @@ const ProductImg = styled.div`
     width: 300px;
     height: auto;
     object-fit: cover;
+    border-radius: 15px;
   }
 `;
 
 const Content = styled.div`
-  padding: 0.5rem;
+  margin-top: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ProductName = styled.h2`
   color: var(--orange);
+  padding: 2rem;
 `;
 
 const ProductDescription = styled.p`
-  color: var(--blue);
+  color: var(--grayBlue);
+  margin-top: 1rem;
 `;
 
 const ProductPrice = styled.h3`
-  background-color: var(--lightGrayBlue);
-  color: var(--grayBlue);
+  color: var(--Blue);
 `;
 
 export default ProductItem;

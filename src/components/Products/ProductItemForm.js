@@ -53,6 +53,7 @@ const StyledForm = styled.form`
   align-items: center;
   flex-direction: row;
   gap: 20px;
+  padding: 1rem;
 `;
 
 const StyledInput = styled.input`
@@ -64,7 +65,7 @@ const StyledInput = styled.input`
   text-align: center;
   border-radius: 12px;
   padding: 1rem;
-  width: 40%;
+  width: 30%;
 
   :focus {
     outline: none;
@@ -93,7 +94,7 @@ const StyledButton = styled.button`
   align-items: center;
   border-radius: 12px;
   padding: 1rem 1.5rem;
-  width: 250px;
+  width: 30%;
   gap: 15px;
   font-weight: 700;
   font-size: 16px;
