@@ -25,9 +25,9 @@ function App() {
     <CartProvider>
       {cartIsShown && <Cart onClose={hideCartHandler} />}
       <Header onShowCart={showCartHandler} />
-      <main>
-        <Main />
-      </main>
+
+      <Main />
+
       <GlobalStyle />
     </CartProvider>
   );

@@ -1,5 +1,5 @@
 # Overview
-The objective of this project is to implement a front-end shopping cart functionality. 
+The objective of this project is to implement a front-end shopping cart functionality using React Context API. 
 
 ## Features
 - Mobile responsive
@@ -11,6 +11,7 @@ The objective of this project is to implement a front-end shopping cart function
 
 # Skills used
 - React
+    - Context API
 - Styled Components
 
 # Lessons Learned

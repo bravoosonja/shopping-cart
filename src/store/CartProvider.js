@@ -1,10 +1,13 @@
 import { useReducer } from "react";
 // Context
 import CartContext from "./CartContext";
+// Image
+import ProductImageThumb from "../assets/images/image-product-1-thumbnail.jpg";
 
 const initialState = {
   items: [],
   totalAmount: 0,
+  image: { ProductImageThumb },
 };
 
 const cartReducer = (state, action) => {

@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-// Styles
-import { HeaderButton, Badge, IconWrapper } from "./HeaderCartButton.styles";
+import styled from "styled-components";
+// Icon
 import CartIcon from "../../assets/images/icon-cart.svg";
 // Context
 import CartContext from "../../store/CartContext";
@@ -40,4 +40,40 @@ const HeaderCartButton = (props) => {
   );
 };
 
+const HeaderButton = styled.button`
+  font: inherit;
+  border: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+  :hover,
+  :active {
+  }
+`;
+
+const IconWrapper = styled.div`
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.3rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Badge = styled.div`
+  font-size: 12px;
+  background: var(--orange);
+  color: var(--white);
+  padding: 1px 6px;
+  border-radius: 45%;
+  vertical-align: top;
+  margin-left: -10px;
+  margin-bottom: 18px;
+  :hover,
+  :active {
+  }
+`;
 export default HeaderCartButton;
