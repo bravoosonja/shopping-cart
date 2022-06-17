@@ -39,6 +39,7 @@ const ProductItemForm = (props) => {
   );
 };
 
+// Styles
 const StyledForm = styled.form`
   display: flex;
   justify-content: space-between;

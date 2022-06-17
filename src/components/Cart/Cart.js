@@ -1,22 +1,11 @@
 import { useContext } from "react";
+import styled from "styled-components";
 // Context
 import CartContext from "../../store/CartContext";
 // Components
 import CartItem from "./CartItem";
 import Modal from "../UI/Modal";
-// Styles
-import {
-  Wrapper,
-  Content,
-  CartItemsStyle,
-  Total,
-  Buttons,
-  CloseIconStyle,
-  DeleteIconStyle,
-  StyledLine,
-} from "./Cart.styles";
 // Icons
-import DeleteIcon from "../../assets/images/icon-delete.svg";
 import CloseIcon from "../../assets/images/icon-close.svg";
 
 const Cart = (props) => {
@@ -52,32 +41,101 @@ const Cart = (props) => {
 
   return (
     <Modal onClose={props.onClose}>
-      <Wrapper>
-        <Content>
-          <h3>Cart</h3>
-        </Content>
-        <StyledLine />
-        <Content>
-          <CloseIconStyle onClick={props.onClose}>
-            <img src={CloseIcon} alt="close cart" />
-          </CloseIconStyle>
-          <CartItemsStyle>
-            {cartItems}
-            <Total>
-              <span>Total Amount</span>
+      <Title>Cart</Title>
+      <CloseIconStyle onClick={props.onClose}>
+        <img src={CloseIcon} alt="close cart" />
+      </CloseIconStyle>
+      <StyledLine />
+      <Content>
+        {/*show when item is in a cart */}
+        {cartItems}
+        {hasItems && (
+          <Total>
+            <p>
+              Total Amount:
               <span>{totalAmount}</span>
-            </Total>
-            {hasItems && (
-              <DeleteIconStyle>
-                <img src={DeleteIcon} alt="delete item from cart" />
-              </DeleteIconStyle>
-            )}
-          </CartItemsStyle>
-          {hasItems && <Buttons>Checkout</Buttons>}
-        </Content>
-      </Wrapper>
+            </p>
+          </Total>
+        )}
+        {hasItems && <StyledButton>Checkout</StyledButton>}
+        {/* Show when cart is empty */}
+        {!hasItems && (
+          <Empty>
+            <h4>Your cart is empty.</h4>
+          </Empty>
+        )}
+      </Content>
     </Modal>
   );
 };
+
+const Title = styled.h3`
+  text-align: left;
+  padding: 1.5rem;
+`;
+
+const Content = styled.div`
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    text-align: left;
+  }
+`;
+
+const StyledLine = styled.hr`
+  border: 1px solid var(--lightGrayBlue);
+  width: 100%;
+  margin-top: 12px 0;
+`;
+
+const Total = styled.div`
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    font-weight: 700;
+    margin-left: 5px;
+  }
+`;
+
+const DeleteIconStyle = styled.div`
+  cursor: pointer;
+`;
+
+const CloseIconStyle = styled.div`
+  position: fixed;
+  top: 10px;
+  left: 21vw;
+  cursor: pointer;
+`;
+
+const StyledButton = styled.button`
+  background-color: var(--orange);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  width: 250px;
+  gap: 15px;
+  font-weight: 700;
+  font-size: 16px;
+`;
+
+const Empty = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  height: 200px;
+  h4 {
+    color: var(--grayBlue);
+  }
+`;
 
 export default Cart;

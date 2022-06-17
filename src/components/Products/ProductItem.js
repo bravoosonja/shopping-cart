@@ -11,23 +11,22 @@ const ProductItem = (props) => {
   const addToCartHandler = (amount) => {
     cartCtx.addItem({
       id: props.id,
-      image: props.image,
+      thumbnail: props.thumbnail,
       name: props.name,
       amount: amount,
       price: props.price,
-      description: props.description,
     });
   };
   return (
     <Wrapper>
       <ProductName>{props.name}</ProductName>
       <ProductImg>
-        <img src={props.image} alt={props.name} />
+        <img src={props.thumbnail} alt={props.name} />
       </ProductImg>
       <Content>
         <ProductPrice>${props.price}</ProductPrice>
         <ProductDescription>{props.description}</ProductDescription>
-        <ProductItemForm />
+        <ProductItemForm id={props.id} onAddToCart={addToCartHandler} />
       </Content>
     </Wrapper>
   );
