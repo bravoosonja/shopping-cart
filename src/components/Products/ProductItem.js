@@ -44,7 +44,7 @@ const Wrapper = styled.div`
 
 const ProductImg = styled.div`
   img {
-    width: 300px;
+    width: 320px;
     height: auto;
     object-fit: cover;
     border-radius: 15px;

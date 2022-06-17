@@ -36,6 +36,7 @@ const ProductThumb = styled.div`
   img {
     width: 50px;
     height: auto;
+    object-fit: cover;
     border-radius: 5px;
   }
 `;
