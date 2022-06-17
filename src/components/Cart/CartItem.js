@@ -36,15 +36,22 @@ const Wrapper = styled.div`
 
 const ProductThumb = styled.div`
   img {
-    width: 6vw;
+    width: 4vw;
     display: block;
     border-radius: 5px;
+  }
+  @media (max-width: 414px) {
+    width: 10vw;
   }
 `;
 
 const Content = styled.div`
   inline-size: 150px;
   overflow-wrap: break-word;
+
+  @media (max-width: 414px) {
+    inline-size: 250px;
+  }
 `;
 
 export default CartItem;

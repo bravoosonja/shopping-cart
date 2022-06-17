@@ -72,6 +72,7 @@ const Badge = styled.div`
   vertical-align: top;
   margin-left: -10px;
   margin-bottom: 18px;
+
   :hover,
   :active {
   }

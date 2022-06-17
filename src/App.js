@@ -5,12 +5,11 @@ import Cart from "./components/Cart/Cart";
 import Products from "./components/Products/Products";
 // Styles
 import { GlobalStyle } from "./GlobalStyle";
-// import "normalize.css";
-
 // Context
 import CartProvider from "./store/CartProvider";
 
 function App() {
+  // Cart state handlers
   const [cartIsShown, setCartIsShown] = useState(false);
 
   const showCartHandler = () => {

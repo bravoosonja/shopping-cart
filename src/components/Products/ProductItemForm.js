@@ -47,6 +47,10 @@ const StyledForm = styled.form`
   flex-direction: row;
   gap: 20px;
   padding: 1rem;
+  @media (max-width: 414px) {
+    padding: 0;
+    flex-direction: column;
+  }
 `;
 
 const StyledInput = styled.input.attrs({ type: "number" })`
@@ -60,6 +64,11 @@ const StyledInput = styled.input.attrs({ type: "number" })`
   padding: 1rem;
   width: 50%;
   cursor: pointer;
+
+  @media (max-width: 414px) {
+    flex-direction: column;
+    width: 90vw;
+  }
 
   :focus {
     outline: 3px solid var(--paleOrange);

@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
         --white: hsl(0, 0%, 100%);
         --black: hsla(0, 0%, 0%, 75%);
         --maxWidth: 1440px;
+   
         
     }
 
@@ -18,18 +19,23 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Kumbh Sans', sans-serif;
         margin: 0;
         padding: 0;
+       
     }
 
     body {
         margin:  0 auto !important;
         padding: 0;
-        padding: 0;
-        width: max-content;
+        width: 100vw;
         background-color:var(--white);
         color: var(--black);
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media (max-width: 414px) {
+            flex-direction: column;
+           
+        }
         
         p {
             font-size: 16px;

@@ -30,6 +30,13 @@ const StyledModalOverlay = styled.div`
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
 
+  @media (max-width: 414px) {
+    width: 90%;
+    top: 10vh;
+    right: 8vw;
+    height: max-content;
+  }
+
   @keyframes slide-down {
     from {
       opacity: 0;
