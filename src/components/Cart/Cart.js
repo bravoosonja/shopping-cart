@@ -30,6 +30,7 @@ const Cart = (props) => {
           name={item.name}
           amount={item.amount}
           price={item.price}
+          thumbnail={item.thumbnail}
           onRemove={cartItemRemoveHandler.bind(null, item.id)}
           onAdd={cartItemAddHandler.bind(null, item)}
         >
@@ -75,7 +76,7 @@ const Title = styled.h3`
 `;
 
 const Content = styled.div`
-  padding: 1.5rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,7 +89,7 @@ const Content = styled.div`
 const StyledLine = styled.hr`
   border: 1px solid var(--lightGrayBlue);
   width: 100%;
-  margin-top: 12px 0;
+  margin-top: 10px 0;
 `;
 
 const Total = styled.div`
@@ -102,14 +103,10 @@ const Total = styled.div`
   }
 `;
 
-const DeleteIconStyle = styled.div`
-  cursor: pointer;
-`;
-
 const CloseIconStyle = styled.div`
   position: fixed;
-  top: 10px;
-  left: 21vw;
+  top: 2.5vh;
+  left: 29vw;
   cursor: pointer;
 `;
 
@@ -122,7 +119,6 @@ const StyledButton = styled.button`
   border-radius: 12px;
   padding: 1rem 1.5rem;
   width: 250px;
-  gap: 15px;
   font-weight: 700;
   font-size: 16px;
 `;
@@ -132,7 +128,8 @@ const Empty = styled.div`
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  height: 200px;
+  height: max-content;
+
   h4 {
     color: var(--grayBlue);
   }

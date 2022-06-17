@@ -22,7 +22,7 @@ const StyledModalOverlay = styled.div`
   position: fixed;
   top: 12vh;
   right: 100px;
-  width: 23%;
+  width: max-content;
   background-color: white;
   border-radius: 7px;
   box-shadow: rgba(50, 50, 93, 0.2) 0px 50px 100px -20px,
