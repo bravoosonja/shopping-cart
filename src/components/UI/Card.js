@@ -9,6 +9,11 @@ const StyledCard = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   padding: 3rem;
+
+  @media (max-width: 375px) {
+    width: 100vw;
+    height: 100vh;
+  }
 `;
 
 export default Card;

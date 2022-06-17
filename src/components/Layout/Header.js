@@ -43,6 +43,11 @@ const Wrapper = styled.div`
   justify-content: space-between;
   margin-top: 50px;
   width: var(--maxWidth);
+
+  @media (max-width: 375px) {
+    width: 375px;
+    height: 1vh;
+  }
 `;
 
 const Content = styled.div`
@@ -55,6 +60,10 @@ const Content = styled.div`
     justify-content: flex-end;
     align-items: space-evenly;
     width: 100%;
+  }
+  @media (max-width: 375px) {
+    width: 375px;
+    height: 1vh;
   }
 `;
 

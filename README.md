@@ -1,11 +1,12 @@
 # Overview
-The objective of this project is to implement a front-end shopping cart functionality using React Context API. 
+The objective of this project is to implement a shopping cart functionality using React Context API. 
 
 ## Features
 - Mobile responsive
 - Add and remove items to the cart 
-- View the cart modal
-- Show active states (empty, not empty) of the cart 
+- View, update, close the cart modal
+- Show active states of the cart 
+- Display the number of items in a cart on a badge
 
 ## Demo
 

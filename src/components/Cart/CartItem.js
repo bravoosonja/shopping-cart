@@ -26,28 +26,25 @@ const CartItem = (props) => {
 const Wrapper = styled.div`
   padding: 1rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: max-content;
   gap: 1rem;
+
+  button {
+    cursor: pointer;
+  }
 `;
 
 const ProductThumb = styled.div`
   img {
-    width: 50px;
-    height: auto;
-    object-fit: cover;
+    width: 6vw;
+    display: block;
     border-radius: 5px;
   }
 `;
 
 const Content = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  button {
-    cursor: pointer;
-  }
+  inline-size: 150px;
+  overflow-wrap: break-word;
 `;
 
 export default CartItem;

@@ -25,6 +25,9 @@ const StyledButton = styled.button`
   gap: 15px;
   font-weight: 700;
   font-size: 16px;
+  :hover {
+    background-color: hsla(26, 100%, 55%, 0.75);
+  }
 `;
 
 export default Button;

@@ -5,7 +5,7 @@ import Cart from "./components/Cart/Cart";
 import Products from "./components/Products/Products";
 // Styles
 import { GlobalStyle } from "./GlobalStyle";
-import "normalize.css";
+// import "normalize.css";
 
 // Context
 import CartProvider from "./store/CartProvider";
@@ -23,8 +23,10 @@ function App() {
 
   return (
     <CartProvider>
-      {cartIsShown && <Cart onClose={hideCartHandler} />}
-      <Header onShowCart={showCartHandler} />
+      <nav>
+        {cartIsShown && <Cart onClose={hideCartHandler} />}
+        <Header onShowCart={showCartHandler} />
+      </nav>
       <main>
         <Products />
       </main>

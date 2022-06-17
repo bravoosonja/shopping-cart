@@ -21,7 +21,7 @@ const ProductItem = (props) => {
     <Wrapper>
       <ProductName>{props.name}</ProductName>
       <ProductImg>
-        <img src={props.thumbnail} alt={props.name} />
+        <img src={props.image} alt={props.name} />
       </ProductImg>
       <Content>
         <ProductPrice>${props.price}</ProductPrice>
@@ -44,9 +44,8 @@ const Wrapper = styled.div`
 
 const ProductImg = styled.div`
   img {
-    width: 320px;
-    height: auto;
-    object-fit: cover;
+    max-width: 100%;
+    display: block;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   }

@@ -105,8 +105,8 @@ const Total = styled.div`
 
 const CloseIconStyle = styled.div`
   position: fixed;
-  top: 2.5vh;
-  left: 29vw;
+  top: 25px;
+  left: 320px;
   cursor: pointer;
 `;
 
@@ -121,6 +121,10 @@ const StyledButton = styled.button`
   width: 250px;
   font-weight: 700;
   font-size: 16px;
+  cursor: pointer;
+  :hover {
+    background-color: hsla(26, 100%, 55%, 0.75);
+  }
 `;
 
 const Empty = styled.div`
