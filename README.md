@@ -11,7 +11,7 @@ The objective of this project is to implement a shopping cart functionality usin
 ### Desktop version
 ![Desktop Demo](desktop_demo.gif)
 ### Mobile version
-![Mobile demo product](mobile_demo_product_page.png)![Mobile demo cart](mobile_demo_cart.png)
+![Mobile Demo](mobile_demo.gif)
 # Skills used
 -React
     - Context API
