@@ -18,6 +18,7 @@ const ProductItem = (props) => {
       price: props.price,
     });
   };
+
   return (
     <>
       <MediaQuery maxWidth={414}>
@@ -29,7 +30,7 @@ const ProductItem = (props) => {
             <span>SNEAKER COMPANY</span>
             <ProductName>{props.name}</ProductName>
             <ProductDescription>{props.description}</ProductDescription>
-            <ProductPrice>${props.price}</ProductPrice>
+            <ProductPrice>{price}</ProductPrice>
             <ProductItemForm id={props.id} onAddToCart={addToCartHandler} />
           </Content>
         </Wrapper>
@@ -41,7 +42,7 @@ const ProductItem = (props) => {
             <img src={props.image} alt={props.name} />
           </ProductImg>
           <Content>
-            <ProductPrice>${props.price}</ProductPrice>
+            <ProductPrice>{price}</ProductPrice>
             <ProductDescription>{props.description}</ProductDescription>
             <ProductItemForm id={props.id} onAddToCart={addToCartHandler} />
           </Content>
@@ -90,7 +91,7 @@ const Content = styled.div`
   @media (max-width: 414px) {
     margin-top: 1rem;
     align-items: flex-start;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     width: 100vw;
 
     span {
@@ -127,6 +128,7 @@ const ProductDescription = styled.p`
 
 const ProductPrice = styled.h3`
   color: var(--Blue);
+
   @media (max-width: 414px) {
     padding: 1rem 0;
     font-size: 22px;

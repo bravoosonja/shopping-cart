@@ -14,6 +14,8 @@ The objective of this project is to implement a shopping cart functionality usin
 - React
     - Context API
 - Styled Components
+    - CSS animation
+    - Global style
 
 # Lessons Learned
 - React
@@ -22,6 +24,7 @@ The objective of this project is to implement a shopping cart functionality usin
 - Adding a modal via React Portal
 - Styled Components
     - Using attribute to style input number spinner
+    - Conditionally adding CSS classnames to styled components 
 
 # Acknowledgements
 - [Style guide](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6)

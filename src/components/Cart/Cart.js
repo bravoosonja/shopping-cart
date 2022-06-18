@@ -98,6 +98,7 @@ const Total = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   span {
     font-weight: 700;
     margin-left: 5px;

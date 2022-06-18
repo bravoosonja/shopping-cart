@@ -15,6 +15,8 @@ const HeaderCartButton = (props) => {
     return current + item.amount;
   }, 0);
 
+  const btnAnimate = btnIsHighlighted ? "animate" : "";
+
   useEffect(() => {
     if (items.length === 0) {
       return;
@@ -31,7 +33,7 @@ const HeaderCartButton = (props) => {
   }, [items]);
 
   return (
-    <HeaderButton onClick={props.onClick}>
+    <HeaderButton animate={btnAnimate} onClick={props.onClick}>
       <IconWrapper>
         <img src={CartIcon} alt="cart-icon" />
         <Badge>{numberOfCartItems}</Badge>
@@ -48,8 +50,24 @@ const HeaderButton = styled.button`
   align-items: center;
   width: 100%;
   font-weight: bold;
-  :hover,
-  :active {
+  animation: ${(props) => (props.animate ? "bump 300ms ease-out" : "none")};
+
+  @keyframes bump {
+    0% {
+      transform: scale(1);
+    }
+    10% {
+      transform: scale(0.9);
+    }
+    30% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1.15);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 `;
 
@@ -73,8 +91,9 @@ const Badge = styled.div`
   margin-left: -10px;
   margin-bottom: 18px;
 
-  :hover,
-  :active {
+  :hover {
+    background-color: hsla(26, 100%, 55%, 0.75);
   }
 `;
+
 export default HeaderCartButton;

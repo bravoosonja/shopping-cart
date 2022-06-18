@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import styled from "styled-components";
 // Components
 import Button from "../UI/Button";
+import Input from "../UI/Input";
 
 const ProductItemForm = (props) => {
   const [amountIsValid, setAmountIsValid] = useState(true);
@@ -18,10 +19,11 @@ const ProductItemForm = (props) => {
     }
     props.onAddToCart(enteredAmountNumber);
   };
+
   return (
     <>
       <StyledForm onSubmit={submitHandler}>
-        <StyledInput
+        <Input
           ref={amountInputRef}
           input={{
             id: "amount_" + props.id,
@@ -47,31 +49,10 @@ const StyledForm = styled.form`
   flex-direction: row;
   gap: 20px;
   padding: 1rem;
+
   @media (max-width: 414px) {
     padding: 0;
     flex-direction: column;
-  }
-`;
-
-const StyledInput = styled.input.attrs({ type: "number" })`
-  border: none;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: var(--lightGrayBlue);
-  width: 5rem;
-  text-align: center;
-  border-radius: 12px;
-  padding: 1rem;
-  width: 50%;
-  cursor: pointer;
-
-  @media (max-width: 414px) {
-    flex-direction: column;
-    width: 90vw;
-  }
-
-  :focus {
-    outline: 3px solid var(--paleOrange);
   }
 `;
 

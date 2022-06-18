@@ -1,6 +1,7 @@
 import styled from "styled-components";
 // Icon
 import DeleteIcon from "../../assets/images/icon-delete.svg";
+
 const CartItem = (props) => {
   const price = `$${props.price.toFixed(2)}`;
 

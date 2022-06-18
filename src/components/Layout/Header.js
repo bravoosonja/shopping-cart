@@ -11,6 +11,7 @@ import MenuIcon from "../../assets/images/icon-menu.svg";
 
 const Header = (props) => {
   const isMobile = useMediaQuery({ query: "(max-width:414px)" });
+
   return (
     <>
       <Wrapper>
@@ -86,6 +87,7 @@ const Content = styled.div`
 const Menu = styled.div`
   display: flex;
   flex-direction: row;
+
   img {
     width: 4.5vw;
     display: block;
@@ -148,6 +150,7 @@ const AvatarStyle = styled.div`
   justify-content: flex-end;
   align-items: center;
   margin-left: 3vw;
+
   img {
     width: 50px;
     height: auto;

@@ -10,8 +10,6 @@ export const GlobalStyle = createGlobalStyle`
         --white: hsl(0, 0%, 100%);
         --black: hsla(0, 0%, 0%, 75%);
         --maxWidth: 1440px;
-   
-        
     }
 
     * {
@@ -19,7 +17,6 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Kumbh Sans', sans-serif;
         margin: 0;
         padding: 0;
-       
     }
 
     body {
@@ -34,7 +31,6 @@ export const GlobalStyle = createGlobalStyle`
 
         @media (max-width: 414px) {
             flex-direction: column;
-           
         }
         
         p {
@@ -50,7 +46,6 @@ export const GlobalStyle = createGlobalStyle`
         h2 {
             font-size: 1.5rem;
             font-weight: 700;
-
         }
 
         h1 {
@@ -77,6 +72,5 @@ export const GlobalStyle = createGlobalStyle`
             -moz-osx-font-smoothing: inherit;
             -webkit-appearance: none;
         }
-
     }
 `;
