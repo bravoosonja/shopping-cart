@@ -9,6 +9,7 @@ The objective of this project is to implement a shopping cart functionality usin
 - Display the number of items in a cart on a badge
 
 ## Demo
+[Live Demo](https://regal-faun-bcff09.netlify.app)
 
 # Skills used
 - React
