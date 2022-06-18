@@ -39,9 +39,10 @@ const ProductThumb = styled.div`
     width: 4vw;
     display: block;
     border-radius: 5px;
-  }
-  @media (max-width: 414px) {
-    width: 10vw;
+
+    @media (max-width: 414px) {
+      width: 10vw;
+    }
   }
 `;
 
@@ -50,7 +51,7 @@ const Content = styled.div`
   overflow-wrap: break-word;
 
   @media (max-width: 414px) {
-    inline-size: 250px;
+    inline-size: 60vw;
   }
 `;
 

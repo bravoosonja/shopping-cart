@@ -67,7 +67,7 @@ const StyledInput = styled.input.attrs({ type: "number" })`
 
   @media (max-width: 414px) {
     flex-direction: column;
-    width: 85vw;
+    width: 90vw;
   }
 
   :focus {

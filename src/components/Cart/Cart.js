@@ -81,6 +81,7 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   h3 {
     text-align: left;
   }
@@ -110,7 +111,7 @@ const CloseIconStyle = styled.div`
   cursor: pointer;
 
   @media (max-width: 414px) {
-    left: 85vw;
+    left: 83vw;
   }
 `;
 
@@ -126,6 +127,11 @@ const StyledButton = styled.button`
   font-weight: 700;
   font-size: 16px;
   cursor: pointer;
+
+  @media (max-width: 414px) {
+    width: 83vw;
+  }
+
   :hover {
     background-color: hsla(26, 100%, 55%, 0.75);
   }

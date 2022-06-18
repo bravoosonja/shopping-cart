@@ -32,8 +32,8 @@ const StyledModalOverlay = styled.div`
 
   @media (max-width: 414px) {
     width: 90%;
-    top: 10vh;
-    right: 8vw;
+    top: 9vh;
+    right: 6vw;
     height: max-content;
   }
 
