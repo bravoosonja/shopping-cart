@@ -18,6 +18,7 @@ The objective of this project is to implement a shopping cart functionality usin
 # Lessons Learned
 - React
     - Importing svgs to React
+    - Using react-responsive for media query
 - Adding a modal via React Portal
 - Styled Components
     - Using attribute to style input number spinner

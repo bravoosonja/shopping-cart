@@ -13,8 +13,7 @@ const StyledCard = styled.div`
   @media (max-width: 414px) {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 0.2rem;
-    padding: 1rem;
+    padding: 0;
   }
 `;
 

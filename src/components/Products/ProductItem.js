@@ -19,30 +19,35 @@ const ProductItem = (props) => {
     });
   };
   return (
-    <Wrapper>
+    <>
       <MediaQuery maxWidth={414}>
-        <>
+        <Wrapper>
           <ProductImg>
             <img src={props.image} alt={props.name} />
           </ProductImg>
           <Content>
+            <span>SNEAKER COMPANY</span>
             <ProductName>{props.name}</ProductName>
             <ProductDescription>{props.description}</ProductDescription>
             <ProductPrice>${props.price}</ProductPrice>
             <ProductItemForm id={props.id} onAddToCart={addToCartHandler} />
           </Content>
-        </>
+        </Wrapper>
       </MediaQuery>
-      <ProductName>{props.name}</ProductName>
-      <ProductImg>
-        <img src={props.image} alt={props.name} />
-      </ProductImg>
-      <Content>
-        <ProductPrice>${props.price}</ProductPrice>
-        <ProductDescription>{props.description}</ProductDescription>
-        <ProductItemForm id={props.id} onAddToCart={addToCartHandler} />
-      </Content>
-    </Wrapper>
+      <MediaQuery minWidth={1040}>
+        <Wrapper>
+          <ProductName>{props.name}</ProductName>
+          <ProductImg>
+            <img src={props.image} alt={props.name} />
+          </ProductImg>
+          <Content>
+            <ProductPrice>${props.price}</ProductPrice>
+            <ProductDescription>{props.description}</ProductDescription>
+            <ProductItemForm id={props.id} onAddToCart={addToCartHandler} />
+          </Content>
+        </Wrapper>
+      </MediaQuery>
+    </>
   );
 };
 
@@ -55,7 +60,7 @@ const Wrapper = styled.div`
   width: min-content;
   margin: auto;
   @media (max-width: 414px) {
-    width: 100vw;
+    width: 100%;
   }
 `;
 
@@ -68,6 +73,7 @@ const ProductImg = styled.div`
 
     @media (max-width: 414px) {
       border-radius: 0;
+      height: 70%;
     }
   }
 `;
@@ -81,15 +87,27 @@ const Content = styled.div`
   align-items: center;
   @media (max-width: 414px) {
     padding: 1rem;
+    margin-top: 0;
+    align-items: flex-start;
+    padding: 1.5rem 2rem;
+    span {
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 0.5rem 0;
+    }
   }
 `;
 
 const ProductName = styled.h2`
   color: var(--orange);
-  padding: 2rem;
+  padding: 1rem;
 
   @media (max-width: 414px) {
+    text-align: left;
     padding: 0;
+    color: var(--black);
+    font-size: 30px;
   }
 `;
 
@@ -98,14 +116,15 @@ const ProductDescription = styled.p`
   margin-top: 1rem;
 
   @media (max-width: 414px) {
-    padding: 0 1rem;
+    text-align: left;
   }
 `;
 
 const ProductPrice = styled.h3`
   color: var(--Blue);
   @media (max-width: 414px) {
-    padding: 1rem;
+    padding: 1rem 0;
+    font-size: 22px;
   }
 `;
 
