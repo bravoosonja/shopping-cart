@@ -11,15 +11,14 @@ The objective of this project is to implement a shopping cart functionality usin
 ### Desktop version
 ![Desktop Demo](desktop_demo.gif)
 ### Mobile version
-<img src="mobile_demo_product_page.png" width="48">
-<img src="mobile_demo_cart.png" width="48">
-# Skills used
-- React
-    - Context API
+<img src="mobile_demo_product_page.png"><img src="mobile_demo_cart.png">
+<h1> Skills used </h1>
+<ul>React<ul>
+ <li>Context API<li>
 - Styled Components
     - CSS animation
     - Global style
-# Lessons Learned
+<h1> Lessons Learned </h1>
 - React
     - Importing svgs to React
     - Using react-responsive for media query
@@ -27,5 +26,5 @@ The objective of this project is to implement a shopping cart functionality usin
 - Styled Components
     - Using attribute to style input number spinner
     - Conditionally adding CSS classnames to styled components 
-# Acknowledgements
+<h1> Acknowledgements </h1>
 - [Style guide](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6)
