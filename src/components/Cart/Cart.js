@@ -105,9 +105,13 @@ const Total = styled.div`
 
 const CloseIconStyle = styled.div`
   position: fixed;
-  top: 25px;
-  left: 320px;
+  top: 3vh;
+  left: 16vw;
   cursor: pointer;
+
+  @media (max-width: 414px) {
+    left: 85vw;
+  }
 `;
 
 const StyledButton = styled.button`

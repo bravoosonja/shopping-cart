@@ -57,7 +57,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     padding: 0.5rem 1rem;
     margin-top: 0.5rem;
-
+    width: 100vw;
     justify-content: center;
   }
 `;

@@ -26,7 +26,7 @@ const StyledButton = styled.button`
   font-weight: 700;
   font-size: 16px;
   @media (max-width: 414px) {
-    width: 90vw;
+    width: 85vw;
   }
   :hover {
     background-color: hsla(26, 100%, 55%, 0.75);
