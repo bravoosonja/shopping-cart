@@ -13,7 +13,7 @@ The objective of this project is to implement a shopping cart functionality usin
 ### Mobile version
 ![Mobile Demo](mobile_demo.gif)
 # Skills used
--React
+- React
     - Context API
 - Styled Components
     - CSS animation
