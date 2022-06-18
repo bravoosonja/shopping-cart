@@ -10,6 +10,11 @@ The objective of this project is to implement a shopping cart functionality usin
 
 ## Demo
 [Live Demo](https://regal-faun-bcff09.netlify.app)
+### Desktop version
+![Desktop Demo](desktop_demo.gif)
+### Mobile version
+![Mobile Product Page]
+
 
 # Skills used
 - React
